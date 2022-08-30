@@ -18,7 +18,7 @@ const data = {
       category: "Shirts",
       image: "/images/slim2.jpg",
       price: 225,
-      countInStock: 10,
+      countInStock: 0,
       brand: "Addidas",
       rating: 4.5,
       numReviews: 10,
