@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      name: "Nike-slim shirts",
+      name: "Nike slim shirts",
       slug: "nike-slim-shirts",
       category: "Shirts",
       image: "/images/slim1.jpg",
@@ -13,7 +13,7 @@ const data = {
       description: "premium quality",
     },
     {
-      name: "Addidas-slim-fit",
+      name: "Addidas slim fit",
       slug: "addidas-slim-fit",
       category: "Shirts",
       image: "/images/slim2.jpg",
@@ -25,7 +25,7 @@ const data = {
       description: "premium quality cotton",
     },
     {
-      name: "Addias-slim-jersy",
+      name: "Addias slim jersy",
       slug: "addias-slim-jersy",
       category: "Jersy",
       image: "/images/Arg.jpg",
@@ -37,7 +37,7 @@ const data = {
       description: "premium quality cotton",
     },
     {
-      name: "Barca-jersy",
+      name: "Barca New Home Kit",
       slug: "barca-jersy-new",
       category: "Jersy",
       image: "/images/barca.jpg",
