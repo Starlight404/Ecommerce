@@ -56,3 +56,16 @@ main {
 .img-thumbnail {
   height: 80px;
 }
+.small-container {
+  height: calc(100vh - 25px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://backiee.com/static/wpdb/wallpapers/1000x563/146431.jpg");
+  background-size: cover;
+}
