@@ -63,7 +63,7 @@ function ProductScreen() {
       type: "CART_ADD_ITEM",
       payload: { ...product, quantity },
     });
-    navigate("/cart")
+    navigate("/cart");
   };
   return loading ? (
     <LoadingBox />
@@ -127,7 +127,7 @@ function ProductScreen() {
                   <ListGroup.Item>
                     <div className="d-grid">
                       <Button onClick={addToCartHandler} variant="primary">
-                        Add to Cart
+                       ADD to cart
                       </Button>
                     </div>
                   </ListGroup.Item>
