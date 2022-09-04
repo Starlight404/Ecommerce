@@ -22,8 +22,10 @@ app.use("/api/seed", seedRouter);
 
 app.use("/api/products", productRouter);
 
-
-
+//its a middleware that accpets four parameters
+app.use((err, req,res,next) => {
+  res.status(500).send({message: err.message});
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
