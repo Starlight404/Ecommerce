@@ -22,7 +22,7 @@ userRouter.post(
         return;
       }
     }
-    res.status(401).send({ message: "invalid email or passeord boss " });
+    res.status(401).send({ message: "invalid email or password KAKA " });
   }) //to catch the error in async function inside it
 );
 
