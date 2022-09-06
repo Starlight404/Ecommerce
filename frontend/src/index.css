@@ -83,3 +83,11 @@ main {
     url("https://p4.wallpaperbetter.com/wallpaper/603/330/349/high-resolution-images-of-nature-3840x2160-wallpaper-preview.jpg");
   background-size: cover;
 }
+.checkout-steps > div {
+  border-bottom: 0.2rem solid lightsalmon;
+  color: lightsalmon;
+}
+.checkout-steps > div.active {
+  border-bottom: 0.2rem solid teal;
+  color: teal;
+}
