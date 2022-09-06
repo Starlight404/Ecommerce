@@ -57,7 +57,7 @@ main {
   height: 80px;
 }
 .small-container {
-  height: calc(100vh - 25px);
+  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,5 +67,19 @@ main {
       rgba(255, 255, 255, 0.5)
     ),
     url("https://backiee.com/static/wpdb/wallpapers/1000x563/146431.jpg");
+  background-size: cover;
+}
+
+.small-containers {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://p4.wallpaperbetter.com/wallpaper/603/330/349/high-resolution-images-of-nature-3840x2160-wallpaper-preview.jpg");
   background-size: cover;
 }
