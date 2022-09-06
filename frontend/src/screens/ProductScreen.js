@@ -127,7 +127,7 @@ function ProductScreen() {
                   <ListGroup.Item>
                     <div className="d-grid">
                       <Button onClick={addToCartHandler} variant="primary">
-                       ADD to cart
+                        ADD to cart
                       </Button>
                     </div>
                   </ListGroup.Item>

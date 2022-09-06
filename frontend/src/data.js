@@ -48,6 +48,33 @@ const data = {
       numReviews: 5,
       description: "premium quality jersy",
     },
+
+    {
+      name: "kaka-jersy",
+      slug: "kaka-jersy-new",
+      category: "Jersy",
+      image: "/images/barca.jpg",
+      price: 300,
+      countInStock: 10,
+      brand: "Spotify",
+      rating: 5,
+      numReviews: 5,
+      description: "premium quality jersy",
+    },
+
+    {
+      // _id: "4",
+      name: "kaka Kit 2",
+      slug: "kaka-jersy-new-2",
+      category: "Jersy",
+      image: "/images/aa.jpg",
+      price: 300,
+      countInStock: 10,
+      brand: "Spotify",
+      rating: 5,
+      numReviews: 5,
+      description: "premium quality jersy",
+    },
   ],
 };
 export default data;
