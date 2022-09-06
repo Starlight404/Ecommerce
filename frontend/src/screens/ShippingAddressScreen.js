@@ -14,6 +14,7 @@ export default function ShippingAddressScreen() {
     cart: { shippingAddress },
   } = state;
   const [fullName, setFullName] = useState(shippingAddress.fullName || '');
+  const [contact, setContact] = useState(shippingAddress.contact || '');
   const [address, setAddress] = useState(shippingAddress.address || '');
   const [city, setCity] = useState(shippingAddress.city || '');
   const [postalCode, setPostalCode] = useState(
@@ -35,6 +36,7 @@ export default function ShippingAddressScreen() {
         city,
         postalCode,
         country,
+        contact
       },
     });
     localStorage.setItem(
@@ -45,6 +47,7 @@ export default function ShippingAddressScreen() {
         city,
         postalCode,
         country,
+        contact
       })
     );
     navigate('/payment');
@@ -96,6 +99,14 @@ export default function ShippingAddressScreen() {
             <Form.Control
               value={country}
               onChange={(e) => setCountry(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="contact">
+            <Form.Label>Contact</Form.Label>
+            <Form.Control
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
               required
             />
           </Form.Group>
