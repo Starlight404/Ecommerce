@@ -1,10 +1,10 @@
-import React, { useState, useContext, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
-import Form from "react-bootstrap/Form";
-import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import { Store } from "../Store";
-import CheckoutSteps from "../components/CheckoutSteps";
+import React, { useContext, useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
+import { Store } from '../Store';
+import CheckoutSteps from '../components/CheckoutSteps';
 
 export default function ShippingAddressScreen() {
   const navigate = useNavigate();
@@ -12,57 +12,52 @@ export default function ShippingAddressScreen() {
   const {
     userInfo,
     cart: { shippingAddress },
-  } = state; //for saving address
-
-  const [fullName, setFullName] = useState(shippingAddress.fullName || " ");
-  const [Address, setAddress] = useState(shippingAddress.Address || " ");
-  const [City, setCity] = useState(shippingAddress.City || " ");
-  const [PostCode, setPostCode] = useState(shippingAddress.PostCode || " ");
-  const [Country, setCountry] = useState(shippingAddress.Country || " ");
-  const [Contact, setContact] = useState(shippingAddress.Contact || " ");
-
+  } = state;
+  const [fullName, setFullName] = useState(shippingAddress.fullName || '');
+  const [address, setAddress] = useState(shippingAddress.address || '');
+  const [city, setCity] = useState(shippingAddress.city || '');
+  const [postalCode, setPostalCode] = useState(
+    shippingAddress.postalCode || ''
+  );
   useEffect(() => {
     if (!userInfo) {
-      navigate("/signin ? redirect=/shipping");
+      navigate('/signin?redirect=/shipping');
     }
   }, [userInfo, navigate]);
-
+  const [country, setCountry] = useState(shippingAddress.country || '');
   const submitHandler = (e) => {
     e.preventDefault();
-
     ctxDispatch({
-      type: "SAVE_SHIPPING_ADDRESS",
+      type: 'SAVE_SHIPPING_ADDRESS',
       payload: {
         fullName,
-        Address,
-        City,
-        PostCode,
-        Country,
-        Contact,
+        address,
+        city,
+        postalCode,
+        country,
       },
     });
     localStorage.setItem(
-      "shippingAddress",
+      'shippingAddress',
       JSON.stringify({
         fullName,
-        Address,
-        City,
-        PostCode,
-        Country,
-        Contact,
+        address,
+        city,
+        postalCode,
+        country,
       })
     );
-    navigate("/payment");
+    navigate('/payment');
   };
-
   return (
     <div>
       <Helmet>
-        <title> Shipping Address</title>
+        <title>Shipping Address</title>
       </Helmet>
+
       <CheckoutSteps step1 step2></CheckoutSteps>
-      <div className="container small-containers">
-        <h1 className="my-3">Shipping Address </h1>
+      <div className="container small-container">
+        <h1 className="my-3">Shipping Address</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="fullName">
             <Form.Label>Full Name</Form.Label>
@@ -72,48 +67,40 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="Address">
+          <Form.Group className="mb-3" controlId="address">
             <Form.Label>Address</Form.Label>
             <Form.Control
-              value={Address}
+              value={address}
               onChange={(e) => setAddress(e.target.value)}
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="City">
+          <Form.Group className="mb-3" controlId="city">
             <Form.Label>City</Form.Label>
             <Form.Control
-              value={City}
+              value={city}
               onChange={(e) => setCity(e.target.value)}
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="PostCode">
-            <Form.Label>Post Code</Form.Label>
+          <Form.Group className="mb-3" controlId="postalCode">
+            <Form.Label>Postal Code</Form.Label>
             <Form.Control
-              value={PostCode}
-              onChange={(e) => setPostCode(e.target.value)}
+              value={postalCode}
+              onChange={(e) => setPostalCode(e.target.value)}
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="Country">
+          <Form.Group className="mb-3" controlId="country">
             <Form.Label>Country</Form.Label>
             <Form.Control
-              value={Country}
+              value={country}
               onChange={(e) => setCountry(e.target.value)}
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="Contact">
-            <Form.Label>Contact</Form.Label>
-            <Form.Control
-              value={Contact}
-              onChange={(e) => setContact(e.target.value)}
-              required
-            />
-          </Form.Group>
           <div className="mb-3">
-            <Button variant="primary" type="Submit">
+            <Button variant="primary" type="submit">
               Continue
             </Button>
           </div>

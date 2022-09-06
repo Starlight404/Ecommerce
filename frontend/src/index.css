@@ -84,8 +84,8 @@ main {
   background-size: cover;
 }
 .checkout-steps > div {
-  border-bottom: 0.2rem solid lightsalmon;
-  color: lightsalmon;
+  border-bottom: 0.2rem solid lightcoral;
+  color: lightcoral;
 }
 .checkout-steps > div.active {
   border-bottom: 0.2rem solid teal;
