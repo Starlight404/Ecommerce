@@ -1,7 +1,23 @@
+import bcrypt from "bcryptjs";
+
 const data = {
+  users: [
+    {
+      name: "Kaka",
+      email: "kakaadmin@gmail.com",
+      password: bcrypt.hashSync("12345"),
+      isAdmin: true,
+    },
+    {
+      name: "Vatija",
+      email: "vatija@gmail.com",
+      password: bcrypt.hashSync("1234"),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id: "1",
+      // _id: "1",
       name: "Nike slim shirts",
       slug: "nike-slim-shirts",
       category: "Shirts",
@@ -14,7 +30,7 @@ const data = {
       description: "premium quality",
     },
     {
-      _id: "2",
+      // _id: "2",
       name: "Addidas slim fit",
       slug: "addidas-slim-fit",
       category: "Shirts",
@@ -27,7 +43,7 @@ const data = {
       description: "premium quality cotton",
     },
     {
-      _id: "3",
+      // _id: "3",
       name: "Addias slim jersy",
       slug: "addias-slim-jersy",
       category: "Jersy",
@@ -40,11 +56,39 @@ const data = {
       description: "premium quality cotton",
     },
     {
-      _id: "4",
+      // _id: "4",
       name: "Barca New Home Kit",
       slug: "barca-jersy-new",
       category: "Jersy",
       image: "/images/barca.jpg",
+      price: 300,
+      countInStock: 10,
+      brand: "Spotify",
+      rating: 5,
+      numReviews: 5,
+      description: "premium quality jersy",
+    },
+
+    {
+      // _id: "4",
+      name: "kaka Kit",
+      slug: "kaka-jersy-new",
+      category: "Jersy",
+      image: "/images/barca.jpg",
+      price: 300,
+      countInStock: 10,
+      brand: "Spotify",
+      rating: 5,
+      numReviews: 5,
+      description: "premium quality jersy",
+    },
+
+    {
+      // _id: "4",
+      name: "kaka Kit 2",
+      slug: "kaka-jersy-new-2",
+      category: "Jersy",
+      image: "/images/aa.jpg",
       price: 300,
       countInStock: 10,
       brand: "Spotify",
